@@ -1,0 +1,23 @@
+# NOTICE
+
+dsh-plugin-odin-gua is a DeepSeek Harness port of **odin-gua**
+<https://github.com/vajraimb/odin-gua> (MIT, © 2026 vajraimb).
+
+Ported from the originals, with attribution:
+
+- `lib/tables.js` — 文王序表、卦名、拼音、八卦、爻位名（`src/gua/gua.odin` 与
+  `src/gua/names_en.odin`，英文卦名由 Unicode 字符名生成）。
+- `lib/hexagram.js` — 互错综变、爻题、六爻图（`src/gua/gua.odin`、`src/gua/render.odin`）。
+- `lib/cast.js` — 三钱法 / 大衍筮法（`src/gua/cast.odin`）。
+- `lib/reading.js` — 朱熹取辞规则（`src/gua/reading.odin`）。
+- `lib/journal.js` — 卦例日志、防重摇相似度（`src/journal/*.odin`）。
+- `lib/api.js` — 工具语义与校验（`src/main.odin`、`src/review.odin`）。
+- `tools/gen-texts.mjs` — 经文表生成与校验（`tools/gen_texts.py`）。
+
+Classical texts (`data/zhouyi.txt`, `data/legge.txt`):
+
+- 中文：通行本《周易》经文（繁体），底本 ctext 武英殿本《周易正義》，以維基文庫、
+  四部叢刊、Project Gutenberg 互校。
+- 英文：James Legge, *The Sacred Books of the East*, Vol. XVI (1882)，公有领域。
+
+逐条来源与改字说明见 `data/SOURCES.md`、`data/provenance.tsv`（同样来自上游仓库）。

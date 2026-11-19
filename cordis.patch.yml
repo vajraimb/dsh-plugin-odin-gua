@@ -1,0 +1,8 @@
+# dsh-plugin-odin-gua — bundle patch.
+#
+# One insert row over the profile root: the plugin registers five tools
+# (cast / lookup / relations / journal / annotate) on the `tools` service.
+# Override this row by id from a profile's own cordis.patch.yml if needed.
+- insert:
+    - id: odin-gua
+      name: 'dsh-plugin-odin-gua'

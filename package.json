@@ -1,0 +1,58 @@
+﻿{
+  "name": "dsh-plugin-odin-gua",
+  "version": "0.1.0",
+  "description": "鏄撶粡璧峰崷 for DeepSeek Harness: cast / lookup / relations / journal / annotate as native DSH tools, with the 鏈辩喒 reading rule, a shared ~/.gua journal and no external binary.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "iching",
+    "i-ching",
+    "hexagram",
+    "divination",
+    "鏄撶粡",
+    "璧峰崷"
+  ],
+  "license": "MIT",
+  "author": "dsh-plugin-odin-gua contributors (port of odin-gua by vajraimb)",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "tools/",
+    "data/zhouyi.txt",
+    "data/legge.txt",
+    "data/provenance.tsv",
+    "data/README.md",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "gen": "node tools/gen-texts.mjs",
+    "test": "node test/engine.test.mjs"
+  }
+}
