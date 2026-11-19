@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-odin-gua",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "易经起卦 for DeepSeek Harness: cast / lookup / relations / journal / annotate as native DSH tools, with the 朱熹 reading rule, a shared ~/.gua journal and no external binary.",
   "keywords": [
     "dsh",
