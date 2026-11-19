@@ -2,9 +2,9 @@
 
 | 项目 | 值 |
 |---|---|
-| npm | [`dsh-plugin-odin-gua@0.1.1`](https://www.npmjs.com/package/dsh-plugin-odin-gua)（账号 `vajrabisj`） |
+| npm | [`dsh-plugin-odin-gua@0.1.3`](https://www.npmjs.com/package/dsh-plugin-odin-gua)（账号 `vajrabisj`） |
 | GitHub | <https://github.com/vajraimb/dsh-plugin-odin-gua>（topic: `dsh-plugin`） |
-| 本机 | `desktop` profile 装的是 `0.1.1`（registry 版本，不是本地目录） |
+| 本机 | `desktop` profile 装的是 `0.1.3`（registry 版本，不是本地目录） |
 | 许可 | MIT |
 
 安装：
@@ -19,7 +19,7 @@ dsh plugin --profile web add dsh-plugin-odin-gua
 |---|---|
 | 插件开发 + 13 项测试全绿 | ✅ |
 | 真实 DSH profile 加载（五个工具注册成功） | ✅ |
-| npm 发布 0.1.0 → 0.1.1（补 repository / homepage） | ✅ |
+| npm 发布 0.1.0 → 0.1.3（补 repository / homepage，LICENSE 规范化） | ✅ |
 | GitHub 仓库 + 源码推送 + `dsh-plugin` topic | ✅ |
 | desktop profile 切到 registry 版本 | ✅ |
 
@@ -60,3 +60,9 @@ git tag v0.1.2; git push --tags
 
 - 用过的 npm token 建议撤销：<https://www.npmjs.com/settings/~/tokens>
 - 仓库里的 `.npmrc` 已在 `.gitignore` 中，不会提交。
+
+## 一个坑：LICENSE 不要加 SPDX 行
+
+在标准 MIT 文本里插入 `SPDX-License-Identifier: MIT` 会让 GitHub 的 licensee 判定变成
+`NOASSERTION`，dsh.so 的检查器就会报「无法确定 SPDX 标识」。保持标准 MIT 文本
+（`MIT License` + 版权行 + 正文）即可，SPDX 由 GitHub 自动识别为 `MIT`。
