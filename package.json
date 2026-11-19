@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "dsh-plugin-odin-gua",
-  "version": "0.1.0",
-  "description": "鏄撶粡璧峰崷 for DeepSeek Harness: cast / lookup / relations / journal / annotate as native DSH tools, with the 鏈辩喒 reading rule, a shared ~/.gua journal and no external binary.",
+  "version": "0.1.1",
+  "description": "易经起卦 for DeepSeek Harness: cast / lookup / relations / journal / annotate as native DSH tools, with the 朱熹 reading rule, a shared ~/.gua journal and no external binary.",
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -11,8 +11,8 @@
     "i-ching",
     "hexagram",
     "divination",
-    "鏄撶粡",
-    "璧峰崷"
+    "易经",
+    "起卦"
   ],
   "license": "MIT",
   "author": "dsh-plugin-odin-gua contributors (port of odin-gua by vajraimb)",
@@ -54,5 +54,13 @@
   "scripts": {
     "gen": "node tools/gen-texts.mjs",
     "test": "node test/engine.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vajraimb/dsh-plugin-odin-gua.git"
+  },
+  "homepage": "https://github.com/vajraimb/dsh-plugin-odin-gua#readme",
+  "bugs": {
+    "url": "https://github.com/vajraimb/dsh-plugin-odin-gua/issues"
   }
 }
